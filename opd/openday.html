@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	    function backHome()
+	    {
+	    	window.location.href='index.html';
+	    }
+  </script>
+</head>
+<body onload="backHome();">
+	<div data-role="page" id="openday_page">
+		<div data-role="content" class="home-content">
+			<div class="openday-table-content">
+				<table class="tabbar">
+					<tr>
+						<td align="left" width="60px"><a href="#" class="back-button">Back</a>
+						</td>
+						<td class="title"><p id="openDayTitle"></p></td>
+					</tr>
+				</table>
+			</div>
+			<div class="openday-table-content">
+				<div class="openday-search">
+					<form action="" autocomplete="on">
+						<table>
+							<tr>
+								<td><input id="search-field"
+									class="textbox" type="text" placeholder="Search sessions" /></td>
+								<td align="right"><a data-role="button" class="my-button"
+									id="search-button">Go</a></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+			<div class="openday-table-content">
+				<div class="openday-tab" id="browerLink">
+					<a href="browser.html?searchkey=All&backFlag=false"
+						class="browse-all" data-transition="slide" id="goto-browser">Browse
+						by time</a>
+				</div>
+			</div>
+			<div class="openday-table-content">
+				<div class="openday-tab" id="myplannerLink">
+					<a href="myplanner.html" class="browse-all" data-transition="slide"
+						id="myPlanner">My Planner</a>
+				</div>
+			</div>
+			<div class="home_logo">
+				<div id="openDayogo" class="p-logo-openday"></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- /page -->
+
+</body>
+</html>

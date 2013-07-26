@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	    function backHome()
+	    {
+	    	window.location.href='index.html';
+	    }
+  </script>
+</head>
+<body onload="backHome();">
+	<div data-role="page" id="search-page" class="p-page-search">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false">
+			<table class="tabbar">
+				<tr>
+				    	<td align="left" width="60px">						
+						         <a href="#" class="back-button">Back</a>											
+						</td>
+					<td class="p-label-searchKey">Search: <label id="searchkey"></label></td>					
+				</tr>
+			</table>
+		</div>
+		<div data-role="content" class="home-content">
+			<form action="">
+				<div class="openday-table-content p-filterscreen">
+					<div id="searchResultcontent"></div>
+				</div>
+			</form>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false">
+			<div class="openday-search-container">
+				<form action="" autocomplete="on">
+					<table width="100%">
+						<tr>
+							<td><input id="searchField" class="textbox"
+								type="text" placeholder="Keyword" /></td>
+							<td align="right"><a data-role="button" class="my-button"
+								id="searchButton">Go</a></td>
+						</tr>
+					</table>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- /page -->
+</body>
+</html>

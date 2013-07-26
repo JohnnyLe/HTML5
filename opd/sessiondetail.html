@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	    function backHome()
+	    {
+	    	window.location.href='index.html';
+	    }
+  </script>
+</head>
+<body onload="backHome();">
+	<div data-role="page" id="session_detail">
+		<div data-role="header">
+			<div class="openday-table-content">
+				<table class="tabbar">
+					<tr>
+						<td align="left" width="60px"><a href="#" class="back-button">Back</a>
+						</td>
+						<td class="title">
+							<p id="pageTitle"></p>
+						</td>
+
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div data-role="content" class="home-content">
+			<div data-role="content">
+				<div class="session_header">
+					<table class="session_header">
+						<tr>
+							<td colspan="2"><div id="session_title" class="p-text-title"></div></td>
+						</tr>
+						<tr>
+							<td>
+								<div id="session_name"></div>
+								<div id="session_time"></div>
+							</td>
+							<td class="start">
+								<div id="btnAddPlanner"></div>
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<div id="session_description"></div>
+
+					<br />
+					<div id="map_canvas"></div>
+                    <br/>
+                    <br/>
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	<!-- /page -->
+</body>
+</html>

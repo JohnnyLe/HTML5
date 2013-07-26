@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>La Trobe Open Day</title>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="static/css/jquery.mobile-1.3.1.min.css" />	
+	<link rel="stylesheet" href="static/css/style.css" />
+	<link rel="apple-touch-icon" href="static/img/iphone-icon.png" />
+	<link rel="shortcut icon" href="static/images/favicon.ico" type="image/ico" />
+   
+	<script src="static/js/jquery-1.9.1.min.js"></script>    
+	<script src="static/js/jquery.mobile-1.3.1.min.js"></script>
+	<script src="static/js/Utils.js"></script>
+	
+	
+	<!-- For google map -->	
+	 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>	
+		
+	<!-- Init controllers  -->
+	<script src="static/controllers/LocalStorageManager.js"></script>
+	<script src="static/controllers/OpendayController.js"></script>
+	<script src="static/controllers/BrowserController.js"></script>
+	<script src="static/controllers/PageDetailController.js"></script>
+	<script src="static/controllers/SearchController.js"></script>
+	<script src="static/controllers/MyPlanner.js"></script>
+	<script src="static/controllers/IndexController.js"></script>
+	<script src="static/controllers/locationData.js"></script>
+	<script src="static/controllers/Router.js"></script>
+	<script type="text/javascript">
+	   
+	  //Detect GPS	
+	  $(document).ready(function() {
+	  		$.mobile.page.prototype.options.domCache = false;
+	  		$.ajaxSetup({ cache: false });
+
+	  		
+	  		//Load data
+	  		LocalStorageManager.init();
+	  		LocalStorageManager.loadMyPlanner();
+	  		IndexController.loadHomeView();	
+	  		locationData.loadData();	
+	  		
+	  		
+	  			  		
+	   });
+	  	  
+	    // Load controller
+	  	OpendayController.load();
+	  	BrowserController.load();
+		SearchController.load();
+		PageDetailController.load();
+		MyPlanner.load();	
+		
+		
+		
+	</script>
+</head>
+<body>
+	<div data-role="page" id="home">
+		<div data-role="content" class="home-content">
+			<div class="home_logo">
+				<div id="logo"></div>
+			</div>			
+			<table id="tbHome" class="home-table-content">
+								
+			</table>						
+		</div>
+	</div>	
+	<!-- /page -->
+</body>
+</html>
